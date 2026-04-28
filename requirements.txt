@@ -1,0 +1,7 @@
+flask
+transformers
+torch
+accelerate
+google-generativeai
+python-dotenv
+bitsandbytes
