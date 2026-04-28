@@ -192,7 +192,7 @@ import google.generativeai as genai
 
 # 1. Setup Gemini (Make sure GOOGLE_API_KEY is in your .env file!)
 genai.configure(api_key=os.getenv("GOOGLE_API_KEY"))
-gemini_model = genai.GenerativeModel('gemini-1.5-flash')
+gemini_model = genai.GenerativeModel('models/gemini-1.5-flash')
 
 def get_hybrid_response(messages):
     user_text = messages[-1]['content']
@@ -218,7 +218,6 @@ def get_hybrid_response(messages):
             tokenize=False, 
             add_generation_prompt=True
         )
-        
         res = generator(
             prompt, 
             max_new_tokens=256, # Shorter for speed
